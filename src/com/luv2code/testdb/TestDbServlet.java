@@ -1,6 +1,8 @@
 package com.luv2code.testdb;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,12 +26,24 @@ public class TestDbServlet extends HttpServlet {
 		String user = "springstudent";
 		String pass = "springstudent";
 		
-		String jdbcUrl = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false";
+		String jdbcUrl = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&allowPublicKeyRetrieval=true";
 		String driver = "com.mysql.cj.jdbc.Driver";
 		
 		//get connection to database
 		try {
+			PrintWriter out = response.getWriter(); //Hey response I am writer and I will write & store value in out variable
 			
+			out.println("Connecting to database: " + jdbcUrl); //Hey out I am printing value from you
+		
+			Class.forName(driver);   //Registration of driver
+			
+			Connection myConn = DriverManager.getConnection(jdbcUrl,user,pass);
+		//Hey DriverManager I am getting Connection from you, using 3 parameters.
+			
+			out.println("SUCCESS!!!");
+			
+			myConn.close();
+		
 		}
 		catch(Exception exc) {
 			exc.printStackTrace();

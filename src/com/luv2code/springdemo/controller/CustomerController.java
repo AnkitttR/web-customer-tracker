@@ -31,5 +31,19 @@ public class CustomerController {
 		                      //"name"  , value
 		
 		return "list-customers";   //list-customers.jsp page
+		
 	}
+	
+	@GetMapping("/showFormForAdd")
+	public String showFormForAdd(Model theModel) {
+		
+		return "customer-form";
+	}
+	
 }
+
+
+
+
+
+

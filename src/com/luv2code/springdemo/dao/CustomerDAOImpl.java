@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,7 +13,7 @@ import com.luv2code.springdemo.entity.Customer;
 public class CustomerDAOImpl implements CustomerDAO {
 
 	// need to inject the session factory
-	@Autowired
+	@Autowired   //Will look for sessionFactory in xml file & inject here.
 	private SessionFactory sessionFactory;
 	
 
@@ -20,7 +21,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 	@Transactional
 	public List<Customer> getCustomers() {
 		
-		//get the current hibernate session 
+		//get the current hibernate session
+		Session currentSession = sessionFactory.getCurrentSession();
 		
 		//create a query
 		

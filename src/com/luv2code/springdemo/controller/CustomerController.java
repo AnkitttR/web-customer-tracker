@@ -24,7 +24,7 @@ public class CustomerController {
 	public String listCustomers(Model theModel) {
 		
 		//get customers from the dao
-		List<Customer> theCustomers = customerDAO.getCustomers(); //Hey customerDAO give me Customers
+		List<Customer> theCustomers = customerService.getCustomers(); //Hey customerDAO give me Customers
 		
 		//add the customers to the model
 		theModel.addAttribute("customers", theCustomers);  //Hey theModel I will add Attribute intoyou.

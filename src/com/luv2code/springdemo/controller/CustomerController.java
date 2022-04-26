@@ -23,7 +23,7 @@ public class CustomerController {
 	@GetMapping("/list")   //Jab hum /customer/list pe honge toh, list-customers.jsp page open hoga.
 	public String listCustomers(Model theModel) {
 		
-		//get customers from the dao
+		//get customers from the service
 		List<Customer> theCustomers = customerService.getCustomers(); //Hey customerDAO give me Customers
 		
 		//add the customers to the model

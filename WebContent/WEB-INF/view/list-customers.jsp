@@ -10,9 +10,8 @@
 
 <!-- reference our css (cascade style sheet) -->
 
-	<link type="text/css"
-		rel="stylesheet"
-		href="${page.Context.request.contextPath}/resources/css/style.css"/>
+	<link href="${page.Context.request.contextPath}/resources/css/style.css"  type="text/css" rel="stylesheet"
+		/>
 																<!--Our Style Sheet "style.css"  -->
 </head>
 

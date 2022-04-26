@@ -20,6 +20,14 @@ public class CustomerDAOImpl implements CustomerDAO {
 	@Transactional
 	public List<Customer> getCustomers() {
 		
+		//get the current hibernate session 
+		
+		//create a query
+		
+		//execute query and get result list
+		
+		//return the results
+		
 		return null;
 	}
 

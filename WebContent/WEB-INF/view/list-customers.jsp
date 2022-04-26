@@ -8,6 +8,12 @@
 
 <title>List Customers</title>
 
+<!-- reference our css (cascade style sheet) -->
+
+	<link type="text/css"
+		rel="stylesheet"
+		href="${page.Context.request.contextPath}/resources/css/style.css"/>
+																<!--Our Style Sheet "style.css"  -->
 </head>
 
 <body>

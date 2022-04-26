@@ -33,6 +33,21 @@
  			<th>Email</th> 
  		</tr>
  		
+ 		<!-- loop over and print our customers -->
+ 		<c:forEach 	var="tempCustomer" items="${customers}"> <!-- customers is attribute name in CustomerController -->
+ 		
+ 		<tr>
+ 			<td> ${tempCustomer.firstName}</td>  <!-- Will call tempCustomer.getFirstName() method -->
+ 			<td> ${tempCustomer.lastName}</td>
+ 			<td> ${tempCustomer.email}</td>
+ 		</tr>
+ 		
+ 		
+ 		</c:forEach>
+ 		
+ 		
+ 		
+ 		
  		</table>
  		
  

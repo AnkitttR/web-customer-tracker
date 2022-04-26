@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/customer")
 public class CustomerController {
 
-	@RequestMapping("/list")   
+	@RequestMapping("/list")   //Jab hum /customer/list pe honge toh, list-customers.jsp page open hoga.
 	public String listCustomers(Model theModel) {
 		
 		return "list-customers";   //list-customers.jsp page

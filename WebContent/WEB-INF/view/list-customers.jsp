@@ -57,7 +57,16 @@
  			<td> ${tempCustomer.firstName}</td>  <!-- Will call tempCustomer.getFirstName() method -->
  			<td> ${tempCustomer.lastName}</td>
  			<td> ${tempCustomer.email}</td>
+ 			
+ 			<td>
+ 			<!-- display the update link -->
+ 			<a href="${updateLink}">Update</a>
+ 			
+ 			</td>
+ 			
+ 			
  		</tr>
+ 		
  		
  		
  		</c:forEach>

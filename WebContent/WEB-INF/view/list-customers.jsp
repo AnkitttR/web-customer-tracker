@@ -67,7 +67,8 @@
  			<!-- display the update link -->
  			<a href="${updateLink}">Update</a>  <!-- Link has customer Id embedded, coded above in line 53 -->
  			|
- 			<a href="${deleteLink}">Delete</a>  <!-- Link has customer Id embedded, coded above in line 58 -->
+ 			<a href="${deleteLink}"
+ 			   onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a>  <!-- Link has customer Id embedded, coded above in line 58 -->
  			</td>
  			
  			

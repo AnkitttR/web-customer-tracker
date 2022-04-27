@@ -46,7 +46,7 @@
 				</tr>
 				
 				<tr>
-					<td><label>Last name:</label></td> 
+					<td><label></label></td> 
 					<td><input type="submit" value="Save" class="save"/></td>
 				</tr>
 		
@@ -56,6 +56,12 @@
 		
 		
 		</form:form>
+		
+		<div style="clear; both;"></div>
+		
+		<p>
+			<a href="${pageContext.request.contextPath}/customer/list">Back to List</a>
+		</p>
 		
 	</div>
 				

@@ -57,13 +57,16 @@ public class CustomerController {
 		return "redirect:/customer/list";
 	}
 	
+	//Jab update per click hoga toh, last mein ek Id hoga, wo Id @RequestParam ki help se catch karenge, aur wo "theId" variable mein store karenge. 
 	@GetMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("customerId") int theId, Model theModel) {
 		
 		//get the customer from the database
-		
+		Customer theCustomer = customerService.getCustomer(theId);
 		
 		//set customer as a model attribute to pre-populate the form
+		//Model ke attribute ke rup mein customer ko set karenge
+		theModel.addAttribute("customer",theCustomer);
 		
 		//send over to our form
 		

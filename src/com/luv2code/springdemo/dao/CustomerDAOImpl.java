@@ -50,4 +50,18 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 	}
 
+
+	@Override
+	public Customer getCustomer(int theId) {
+		
+		//get the current hibernate session
+		
+		
+		//now retrieve from database  using the primary key
+		
+		return null;
+	}
+
+
+	
 }

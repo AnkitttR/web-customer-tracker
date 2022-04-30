@@ -38,6 +38,12 @@ public class CRMLoggingAspect {
 		myLogger.info("=====>> in @Before: calling method: " + theMethod);
 		
 		//display the arguments to the method
+		
+		
+		//get the arguments
+		
+		
+		//loop thru and display args
 	}
 	
 	// add @AfterReturning advice
